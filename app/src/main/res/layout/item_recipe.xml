@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout_recipes"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:saveEnabled="true">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_spacing"
+        android:layout_marginLeft="@dimen/default_spacing"
+        android:layout_marginRight="@dimen/default_spacing"
+        android:layout_marginTop="@dimen/small_spacing"
+        android:clipToPadding="true"
+        app:cardCornerRadius="5dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_recipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/recipeItemImageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="-1dp"
+                android:layout_marginTop="-2dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/demo" />
+
+            <TextView
+                android:id="@+id/recipeItemTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/my_favorite_cake"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toRightOf="@+id/recipeItemImageView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recipeItemImageView" />
+
+            <ImageView
+                android:id="@+id/servingCountImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/servings"
+                app:layout_constraintLeft_toRightOf="@+id/recipeItemImageView"
+                app:layout_constraintRight_toLeftOf="@+id/ingredientsImageView"
+                app:layout_constraintTop_toBottomOf="@+id/recipeItemTextView" />
+
+            <ImageView
+                android:id="@+id/checklistImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/checklist"
+                app:layout_constraintLeft_toRightOf="@+id/ingredientsImageView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recipeItemTextView" />
+
+            <ImageView
+                android:id="@+id/ingredientsImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ingredients"
+                app:layout_constraintLeft_toRightOf="@+id/recipeItemImageView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recipeItemTextView" />
+
+            <TextView
+                android:id="@+id/ingredientCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="8dp"
+                android:text="7"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintLeft_toRightOf="@+id/ingredientsImageView"
+                app:layout_constraintRight_toLeftOf="@+id/ingredientsImageView"
+                app:layout_constraintTop_toBottomOf="@+id/checklistImageView" />
+
+            <TextView
+                android:id="@+id/servingCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="8dp"
+                android:text="5"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintLeft_toRightOf="@+id/servingCountImageView"
+                app:layout_constraintRight_toLeftOf="@+id/servingCountImageView"
+                app:layout_constraintTop_toBottomOf="@+id/checklistImageView" />
+
+            <TextView
+                android:id="@+id/checklistTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="8dp"
+                android:text="8"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintLeft_toRightOf="@+id/checklistImageView"
+                app:layout_constraintRight_toLeftOf="@+id/checklistImageView"
+                app:layout_constraintTop_toBottomOf="@+id/checklistImageView" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

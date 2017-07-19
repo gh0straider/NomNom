@@ -1,0 +1,19 @@
+<resources>
+  <string name="app_name">Nom Nom</string>
+  <string name="navigation_drawer_open">Open</string>
+  <string name="navigation_drawer_close">Close</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="nav_sync_data">Sync</string>
+  <string name="nav_about">About</string>
+  <string name="step_text_preview">Melt the butter and bittersweet chocolate together in a microwave or a double boiler. If microwaving, heat for 30 seconds at a time, removing bowl and stirring ingredients in between.</string>
+  <string name="appwidget_text">Example</string>
+  <string name="add_widget">Add widget</string>
+  <string name="recipe_image_description">Recipe Image</string>
+    <string name="my_favorite_cake">My Favorite Cake</string>
+    <string name="toast_message">Product of Gh0straider, Enjoy</string>
+    <string name="step_text_2">2</string>
+  <string name="text_unit_cup">CUP</string>
+  <string name="text_item_name">Graham Cracker crumbs</string>
+</resources>

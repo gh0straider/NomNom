@@ -1,0 +1,64 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framelayout_recipelist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gh0straider.nomnom.RecipeList.RecipeListFragment">
+
+  <LinearLayout
+      android:id="@+id/loading_layout_home"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:orientation="vertical"
+      android:padding="@dimen/default_spacing"
+      android:visibility="gone">
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/error_layout_home"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:orientation="vertical"
+      android:padding="@dimen/default_spacing"
+      android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/error_image"
+        android:layout_width="@dimen/err_icon_size"
+        android:layout_height="@dimen/err_icon_size"
+        android:scaleType="fitXY"
+        android:src="@drawable/sad_cloud" />
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="This is an error message to the user" />
+
+    <Button
+        android:id="@+id/refresh_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        tools:text="Refresh" />
+
+  </LinearLayout>
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/recycler_home"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:saveEnabled="true" />
+
+
+</FrameLayout>

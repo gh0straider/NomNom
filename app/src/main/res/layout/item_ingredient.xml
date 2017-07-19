@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vert_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:id="@+id/hor_item_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:paddingEnd="@dimen/default_spacing"
+      android:paddingStart="@dimen/small_spacing"
+      android:paddingTop="@dimen/small_spacing"
+      android:saveEnabled="true">
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="@dimen/size_40sp"
+        android:text="@string/step_text_2"
+        android:textColor="@color/md_black_1000"
+        android:textSize="@dimen/text_size_15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="@dimen/size_60sp"
+        android:text="@string/text_unit_cup"
+        android:textColor="@color/md_black_1000"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/small_spacing"
+        android:paddingRight="@dimen/small_spacing"
+        android:text="@string/text_item_name"
+        android:textColor="@color/md_black_1000"
+        android:textSize="@dimen/text_size_18sp" />
+  </LinearLayout>
+
+  <View
+      android:id="@+id/view_ingredients"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="?android:attr/listDivider" />
+</LinearLayout>

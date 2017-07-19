@@ -1,0 +1,95 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_steps"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gh0straider.nomnom.Steps.StepsFragment">
+
+  <ScrollView
+      android:id="@+id/scrollview_steps"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipToPadding="false"
+      android:paddingBottom="80dp">
+
+    <LinearLayout
+        android:id="@+id/vert_linear_frag_steps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+          android:id="@+id/video_player"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:minHeight="200dp"
+          android:visibility="gone"
+          app:resize_mode="fixed_width"
+          app:use_controller="false" />
+
+      <ImageView
+          android:id="@+id/step_image"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:adjustViewBounds="true"
+          android:visibility="gone" />
+
+      <TextView
+          android:id="@+id/step_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/default_spacing"
+          android:text="@string/step_text_preview"
+          android:textColor="#000"
+          android:textSize="16sp" />
+
+    </LinearLayout>
+  </ScrollView>
+
+  <LinearLayout
+      android:id="@+id/hor_frag_steps"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:gravity="center"
+      android:paddingBottom="@dimen/small_spacing"
+      android:paddingLeft="@dimen/extra_spacing"
+      android:paddingRight="@dimen/extra_spacing">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_spacing"
+        android:src="@drawable/back"
+        app:backgroundTint="?android:attr/statusBarColor"
+        app:fabSize="normal" />
+
+    <TextView
+        android:id="@+id/step_nav_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:shadowColor="#fff"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="10"
+        android:text="5/20"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_spacing"
+        android:src="@drawable/forward"
+        app:backgroundTint="?android:attr/statusBarColor"
+        app:fabSize="normal" />
+  </LinearLayout>
+
+</FrameLayout>
